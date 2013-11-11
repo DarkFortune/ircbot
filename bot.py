@@ -9,17 +9,18 @@ nick = "Lbot"
 channel = "#testingmyswag"
 #functions! :D
 def join(chan):
-    irc.send("JOIN "+ chan +"\n")
+    irc.send("JOIN "+ chan +"\r\n")
 
 def ping():
-      irc.send("PONG :Pong\n")
+      irc.send("PONG :Pong \r\n"
 
-def sendmsg(chan , msg):
-      irc.send("PRIVMSG "+ chan +" :"+ msg +"\n")
+def sendmsg(chan,msg):
+      irc.send("PRIVMSG "+ chan +" :"+ msg +"\r\n")
+
 #connect
 irc.connect((server, 6667))
-irc.send("USER "+ nick +" "+ nick +" "+ nick + " :This is a bot by Lucy \n")
-irc.send("NICK "+ nick +"\n")
+irc.send("USER "+ nick +" "+ nick +" "+ nick + " :This is a bot by Lucy \r\n")
+irc.send("NICK "+ nick +"\r\n")
 join(channel)
 
 while 1:

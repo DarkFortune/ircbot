@@ -14,7 +14,7 @@ def join(chan):
 def ping():
       irc.send("PONG :Pong \r\n"
 
-def sendmsg(chan,msg):
+def sendmsg(chan, msg):
       irc.send("PRIVMSG "+ chan +" :"+ msg +"\r\n")
 
 #connect

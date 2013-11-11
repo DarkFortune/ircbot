@@ -28,5 +28,4 @@ while 1:
     ircmsg = ircmsg.strip('\r\n')
     print(ircmsg)
     if ircmsg.find("PING :") != -1:
-        ping()
-
+          irc.send("PONG "+ ircmsg.split() [1] + "\r\n" )
